@@ -162,3 +162,4 @@ LOGIN_REDIRECT_URL = '/'
 CART_ID = 'cart_in_session'
 IAMPORT_KEY = '2769321255784666'
 IAMPORT_SECRET = 'Eo13aJsnu9iOou4ZZMPrss4PydPzMnarMcuWWWjq6Cfu6jt65iyyLCojPeSCB33ofykbvEBBhR5oazug'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
