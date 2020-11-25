@@ -8,7 +8,7 @@ class Cart(object):
     def __init__(self, request):
         # 장바구니 초기화 메소드 (request.session 변수에 저장)
         self.session = request.session
-        cart = self.session.get(settings.CART_ID)  # CART_ID 변수는 settings.py 파일에서 정의
+        cart = self.session.get(settings.CART_ID)
         if not cart:
             cart = self.session[settings.CART_ID] = {}
         self.cart = cart

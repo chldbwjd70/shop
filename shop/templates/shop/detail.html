@@ -17,6 +17,10 @@
                     <span class="badge badge-secondary">Description</span>
                     {{product.description|linebreaksbr}}
                 </p><br/>
+                <p>
+                    <span class="badge badge-secondary">Description</span>
+                    {{product.meta_description|linebreaksbr}}
+                </p><br/>
                 <form action="{% url 'cart:product_add' product.id %}" method="post">  <!-- !!! -->
                     {{add_to_cart}}                                                    <!-- !!! -->
                     {% csrf_token %}

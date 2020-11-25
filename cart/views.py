@@ -27,10 +27,10 @@ def remove(request, product_id):  # 장바구니에서 지정한 상품을 삭�
 
 def detail(request):  # 장바구니 페이지 뷰
     cart = Cart(request)
-    add_coupon = AddCouponForm()
-    for product in cart:  # 장바구니에 담긴 상품마다 (수량 수정 가능하도록) AddProductForm 생성
+    add_coupon = AddCouponForm()  # !!! AddCouponForm
+    for product in cart:
         product['quantity_form'] = AddProductForm(
             initial={'quantity': product['quantity'], 'is_update': True}
         )
-    return render(request, 'cart/detail.html',  # 폼을 템플릿에 전달하여 출력
+    return render(request, 'cart/detail.html', 				 # 폼을 템플릿에 전달하여 출력
                   {'cart': cart, 'add_coupon': add_coupon})  # !!! AddCouponForm

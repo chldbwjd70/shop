@@ -29,3 +29,4 @@ def product_detail(request, id, product_slug=None):
                                                 'add_to_cart': add_to_cart,
                                                 'cart': cart})
 
+
